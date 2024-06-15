@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Voucher</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div style="background-color: #f2f2f2; padding: 20px;">
+        <h2 style="text-align: center;">Your Voucher</h2>
+        <!-- Loop through each voucher and display its details -->
+        <ul>
+            <li th:each="voucher : ${vouchers}">
+                <p th:text="'Voucher Code: ' + ${voucher.code}"></p>
+                <p th:text="'Voucher Type: ' + ${voucher.type}"></p>
+            </li>
+        </ul>
+        <p>Thank you for being our customer!</p>
+    </div>
+</body>
+</html>
